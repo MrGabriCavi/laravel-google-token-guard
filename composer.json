@@ -1,0 +1,51 @@
+{
+    "name": "mrgabricavi/laravel-google-token-guard",
+    "description": "Provides a security guard for Laravel by using Google Token",
+    "keywords": ["framework", "laravel", "packages", "guard", "security"],
+    "license": "MIT",
+    "require": {
+        "laravel/framework": "^9"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "orchestra/testbench": "^6.0|^7.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "MrGabriCavi\\LaravelGoogleTokenGuard\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MrGabriCavi\\LaravelGoogleTokenGuard\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MrGabriCavi\\LaravelGoogleTokenGuard\\Providers\\LaravelGoogleTokenGuardServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
