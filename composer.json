@@ -4,6 +4,7 @@
     "keywords": ["framework", "laravel", "packages", "guard", "security"],
     "license": "MIT",
     "require": {
+        "google/apiclient": "^2",
         "laravel/framework": "^9"
     },
     "require-dev": {
