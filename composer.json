@@ -2,10 +2,11 @@
     "name": "mrgabricavi/laravel-google-token-guard",
     "description": "Provides a security guard for Laravel by using Google Token",
     "keywords": ["framework", "laravel", "packages", "guard", "security"],
-    "license": "MIT",
+    "license": "GPL-3.0-or-later",
     "require": {
         "google/apiclient": "^2",
-        "laravel/framework": "^9"
+        "laravel/framework": "^9",
+        "mrgabricavi/laravel-eloquent-repositories": "dev-main"
     },
     "require-dev": {
         "mockery/mockery": "^1.0",
@@ -23,19 +24,6 @@
         }
     },
     "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ],
-        "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
-        ]
     },
     "extra": {
         "laravel": {
