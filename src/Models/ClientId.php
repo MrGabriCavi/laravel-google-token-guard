@@ -3,7 +3,9 @@
 namespace MrGabriCavi\LaravelGoogleTokenGuard\Models;
 
 
-class GoogleTokenClientId extends GoogleTokenBaseModel
+use MrGabriCavi\LaravelEloquentRepositories\Models\BaseModel;
+
+class ClientId extends BaseModel
 {
     /**
      * @var string
